@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <main>
+    <div class="generator">
+      <h1>Password Generator</h1>
+
+      <label class="password-wrap">
+        <input 
+          type="text" 
+          id="password" 
+          readonly 
+          placeholder="Generate a password">
+        <button class="material-icons copyPassword" id="copy">content_copy</button>
+      </label>
+
+      <span class="passCopy">Password coppied to the clipboard!</span>
+      <span class="errorCopy">An error has occurred, please try again!</span>
+
+      <label>
+        <span>Password Length:</span>
+        <input type="number" id="length" value="16">
+      </label>
+      
+      <label>
+        <span>Include Uppercase Letters:</span>
+        <input type="checkbox" id="uppercase" checked>
+      </label>
+
+      <label>
+        <span>Include Lowercase Letters:</span>
+        <input type="checkbox" id="lowercase" checked>
+      </label>
+
+      <label>
+        <span>Include Numbers:</span>
+        <input type="checkbox" id="numbers" checked>
+      </label>
+
+      <label>
+        <span>Include Symbols:</span>
+        <input type="checkbox" id="symbols" checked>
+      </label>
+
+      <button type="submit" id="generate">Generate Password</button>
+    </div>
+
+    <div class="savedPass">
+      <h2>Saved Passwords</h2>
+      <span class="maxCopies">The maximum ammount has been reached!</span>
+      <ul class="list-container">
+
+      </ul>
+    </div>
+
+  </main>
+
+  <div class="tip_container">
+    <span class="winTip">* Hold Win + V to access clipboard on Windows</span><br>
+    <span class="macTip">* Hold the Option key and then press Command + V to access clipboard on Mac</span>
+  </div>
+  
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
